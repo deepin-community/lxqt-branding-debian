@@ -1,5 +1,65 @@
-template-repository (1.0-1) unstable; urgency=medium
+lxqt-branding-debian (0.14.0.6) unstable; urgency=medium
 
-  * Initial release
+  * lxqt/panel.conf: fix default menu plugin. (Closes: #1089868)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Sun, 23 Mar 2025 18:21:21 +0100
+
+lxqt-branding-debian (0.14.0.5) unstable; urgency=medium
+
+  * Update debian/salsa-ci.yml file
+  * Clean up of group membership after 2nd calls.
+  * Run wrap-and-sort.
+  * debian/control: build-deps on lxqt-build-tools-qt5. (Closes: #1090245)
+  * debian/copyright: update.
+
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Sat, 15 Feb 2025 15:01:13 +0100
+
+lxqt-branding-debian (0.14.0.4) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on lxqt-build-tools.
+    + lxqt-branding-debian: Drop versioned constraint on lxqt-panel in Replaces.
+    + lxqt-branding-debian: Drop versioned constraint on lxqt-panel in Breaks.
+  * Bump debhelper from old 12 to 13.
+    + debian/rules: Drop --fail-missing argument to dh_missing, which is now the
+      default.
+  * Update standards version to 4.6.1, no changes needed.
+  * Avoid explicitly specifying -Wl,--as-needed linker flag.
+
+  [ Andrew Lee (李健秋) ]
+  * debian/control: update team address.
+  * debian/control: add myself as uploader.
+  * debian/control: bump to Standards-version to 4.6.2, no changes needed.
+  * debian/control: drop breaks and replaces on obsoleted version.
+  * debian/copyright: update
+  * debian/salsa-ci.yml: added.
+
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Wed, 06 Sep 2023 21:36:14 +0200
+
+lxqt-branding-debian (0.14.0.3) unstable; urgency=medium
+
+  * Relaxed dependencies as far as possible (Closes: #922505)
+  * Added basic qterminal settings
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 17 Feb 2019 18:31:21 +0100
+
+lxqt-branding-debian (0.14.0.2) unstable; urgency=medium
+
+  * Added desktop files for xfwm4 settings modified for LXQt
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 16 Feb 2019 22:54:49 +0100
+
+lxqt-branding-debian (0.14.0.1) unstable; urgency=medium
+
+  * Added needed Breaks and Replaces for lxqt-panel. (Closes: #921479)
+    Thanks Andreas Beckmann (anbe@debian.org) for the finding.
+
+ -- Alf Gaida <agaida@siduction.org>  Wed, 06 Feb 2019 01:42:13 +0100
+
+lxqt-branding-debian (0.14.0) unstable; urgency=medium
+
+  * Initial release (Closes: #883037 )
+  * Provide debian backgrounds as default (Closes: #914345)
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 03 Feb 2019 17:05:11 +0100
